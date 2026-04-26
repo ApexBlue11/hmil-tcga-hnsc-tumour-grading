@@ -1,0 +1,15 @@
+# Core ML — JAX CPU build (no CUDA/TPU needed for inference)
+jax[cpu]
+flax
+
+# PyTorch — CPU only to avoid pulling in a 2GB CUDA build
+# Only used for torch.load() to read the .pt embedding files
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+
+# App & visualisation
+streamlit
+numpy
+Pillow
+matplotlib
+scipy
